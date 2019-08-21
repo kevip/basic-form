@@ -1,0 +1,17 @@
+@import "../../../assets/sass/variables.scss";
+@import "../../../assets/sass/fonts.scss";
+
+.paragraph,
+.title {
+    font-family: Flexo-Caps;
+    text-align: center;
+}
+.title {
+    color: $bcp-orange;
+    font-size: 34px;
+    font-weight: 600;
+}
+.paragraph {
+    color: $bcp-blue;
+    font-size: 46px;
+}

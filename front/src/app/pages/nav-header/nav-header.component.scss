@@ -1,0 +1,27 @@
+@import "../../../assets/sass/variables.scss";
+@import "../../../assets/sass/fonts.scss";
+
+.header {
+    background-color: $bcp-blue;
+    .nav-header {
+        &__list {
+            text-align: center;
+            margin-top: 0;
+            &-item {
+                color: #fff;
+                display: inline-block;
+                font-family: Flexo-Caps;
+                list-style: none;
+                padding: 14px 10px 10px 10px;
+                border-bottom: 4px solid $bcp-blue;
+                font-size: 16px;
+            
+                .active,
+                &:hover {
+                    border-bottom: 4px solid $bcp-teal;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

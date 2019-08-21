@@ -1,0 +1,57 @@
+<div class="radio-group">
+    <label for="requestType1"><input id="requestType1" type="radio" name="requestType">Demanda</label>
+    <label for="requestType2"><input id="requestType2" type="radio" name="requestType">Programado</label>
+</div>
+<div class="tab-container">
+    <div class="tab-header">
+        <ul class="tab-list">
+            <li class="tab-item">Carga Unitaria</li>
+            <li class="tab-item">Carga Masiva</li>
+        </ul>
+    </div>
+    <div class="tab-body">
+        <form class="bcp-form__grid" (ngSubmit)="addRequest(bcpForm)" #bcpForm="ngForm">
+            <div class="input-group group1">
+                <label for="accountType">Tipo de cuenta:</label>
+                <select class="input" name="accountType" [(ngModel)] ="accountType">
+                    <option value="{{at.value}}" *ngFor="let at of accountTypes"> {{ at.name }}</option>
+                </select>
+            </div>
+            <div class="input-group group1">
+                <label for="accountNumber">Numero de cuenta:</label>
+                <input type="text" class="input" [(ngModel)] ="accountNumber" name="accountNumber">
+            </div>
+            <div class="input-group group1">
+                <label for="initialPeriod">Periodo Inicio:</label>
+                <input type="date" class="input" [(ngModel)] ="initialPeriod" name="initialPeriod">
+            </div>
+            <div class="input-group group1">
+                <label for="endOfPeriod">Periodo Fin:</label>
+                <input type="date" class="input" [(ngModel)] ="endOfPeriod" name="endOfPeriod">
+            </div>
+            <div class="input-group">
+                <button class="btn bcp-orange" type="submit">Añadir</button>
+            </div>
+        </form>
+    </div>
+    <table class="bcp-table">
+        <thead>
+            <tr>
+                <th>TIPO DE CUENTA</th>
+                <th>NUMERO DE CUENTA</th>
+                <th>PERIODO INICIO</th>
+                <th>PERIODO FIN</th>
+                <th>TOTAL EEC</th>
+            </tr>
+        </thead>
+        <tbody class=""> 
+            <tr *ngFor="let request of requests">
+                <td>{{ request.accountType }}</td>
+                <td>{{ request.accountNumber }}</td>
+                <td>{{ request.initialPeriod }}</td>
+                <td>{{ request.endOfPeriod }}</td>
+                <td>{{ request.totalEEC }}</td>
+            </tr>   
+        </tbody>
+    </table>
+</div>

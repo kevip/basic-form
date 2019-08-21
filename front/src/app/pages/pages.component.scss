@@ -1,0 +1,107 @@
+@import "../../assets/sass/fonts.scss";
+@import "../../assets/sass/variables.scss";
+
+.container {
+    .bcp-panel {
+        border: 1px solid $bcp-light-gray-one;
+        border-radius: 5px;
+        margin: 10px 40px;
+        padding: 10px 0;
+        font-family: Flexo-Caps;
+        .panel-header,
+        .panel-body {
+            padding: 20px;
+        }
+        .panel-header {
+            border-bottom: 1px solid $bcp-light-gray-one;
+        }
+    }
+}
+.bcp-form__grid {
+    .input-group {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        & > label, .input {
+            display: inline-block
+        }
+        & > label {
+            width: 100px;
+        }   
+        .input {
+            margin-left: 10px;
+            min-height: 25px;
+            min-width: 175px;
+        }
+        .btn{
+            padding: 8px 18px;
+            font-size: 16px;
+            border-radius: 8px;
+            font-family: Helvetica;
+            border: none;
+            cursor: pointer;
+            &.bcp-orange {
+                background-color: $bcp-orange;
+                color: #fff; 
+            }
+        }
+    }
+}
+.bcp-table {
+    border-spacing: 0;
+    padding: 20px 0;
+    width: 100%;
+    & > thead,
+    & > tbody {
+        & > tr {
+            text-align: center;
+        }
+    }
+    & > thead{
+        background-color: $bcp-blue;
+        color: #fff;
+        font-size: 13px;
+        & > tr {
+            & > th{
+                padding: 5px;
+                border: 0;
+                &:first-child {
+                    text-align: left;
+                }
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    & > tbody {
+        & > tr {
+            & > td {
+                &:first-child {
+                    text-align: left;
+                }
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.panel2 {
+    border: 1px solid $bcp-light-gray-one;
+    margin: 20px 0; 
+    padding: 65px 60px;
+    position: relative;
+    & > .title {
+        background: #fff;
+        left: 20px;
+        position: absolute;
+        top: -8px;
+        width: 150px;
+        & > h3 {
+            color: $bcp-blue;
+            margin: 0;
+        }
+    }
+}

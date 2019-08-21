@@ -1,0 +1,28 @@
+@import '../../../assets/sass/variables.scss';
+@import '../../../assets/sass/fonts.scss';
+
+.tab-container {
+    //font-family: Flexo-Caps;
+    .tab-header {
+        .tab-list {
+            padding: 0;
+            margin: 16px 0 0 0;
+            .tab-item {
+                display: inline-block;
+                list-style: none;
+                padding: 10px;
+                border-top: 1px solid $light-gray-two;
+                border-left: 1px solid $light-gray-two;
+                border-right: 1px solid $light-gray-two;
+                &:last-child {
+                    border-left: none;
+                }
+            }
+        }
+    }
+    .tab-body {
+        padding: 20px 0;
+        margin: 0;
+        border: 1px solid $light-gray-two;
+    }
+}
